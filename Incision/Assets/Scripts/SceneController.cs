@@ -67,12 +67,12 @@ public class SceneController : MonoBehaviour
         return SceneUtility.GetBuildIndexByScenePath(name);
     }
 
-    void StartingTime()
+    public void StartingTime()
     {
         Time.timeScale = 1f;
     }
 
-    void StoppingTime()
+    public void StoppingTime()
     {
         Time.timeScale = 0f;
     }
