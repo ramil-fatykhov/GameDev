@@ -140,6 +140,76 @@ public class GameLogic : MonoBehaviour {
         }
     }
 
+    private void initLevel()
+    {
+        //init spots buttons
+        int button_index_1 = UnityEngine.Random.Range(1, 6);
+
+        int button_index_2 = UnityEngine.Random.Range(1, 6);
+        while (button_index_1 == button_index_2)
+        {
+            button_index_2 = UnityEngine.Random.Range(1, 6);
+        }
+
+        int button_index_3 = UnityEngine.Random.Range(1, 6);
+        while ((button_index_3 == button_index_2) || (button_index_3 == button_index_1))
+        {
+            button_index_3 = UnityEngine.Random.Range(1, 6);
+        }
+
+        int button_index_4 = UnityEngine.Random.Range(1, 6);
+        while ((button_index_4 == button_index_3) || (button_index_4 == button_index_2) || (button_index_4 == button_index_1))
+        {
+            button_index_4 = UnityEngine.Random.Range(1, 6);
+        }
+
+        int button_index_5 = UnityEngine.Random.Range(1, 6);
+        while ((button_index_5 == button_index_4) || (button_index_5 == button_index_3)
+           || (button_index_5 == button_index_2) || (button_index_5 == button_index_1))
+        {
+            button_index_5 = UnityEngine.Random.Range(1, 6);
+        }
+
+        //add rotation end
+
+        spot_1.transform.position = getButtonCoordinates(button_index_1);
+        spot_2.transform.position = getButtonCoordinates(button_index_2);
+        spot_3.transform.position = getButtonCoordinates(button_index_3);
+        spot_4.transform.position = getButtonCoordinates(button_index_4);
+        spot_5.transform.position = getButtonCoordinates(button_index_5);
+
+        spot_1_pressed.transform.position = spot_1.transform.position;
+        spot_2_pressed.transform.position = spot_2.transform.position;
+        spot_3_pressed.transform.position = spot_3.transform.position;
+        spot_4_pressed.transform.position = spot_4.transform.position;
+        spot_5_pressed.transform.position = spot_5.transform.position;
+        //init spots buttons end
+    }
+
+    public Vector3 getButtonCoordinates(int i)
+    {
+        if (i == 1)
+        {
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_1, Globals.EASY_SPOT_Y_POSITION_1, 0);
+        }
+        else if (i == 2)
+        {
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_2, Globals.EASY_SPOT_Y_POSITION_2, 70);
+        }
+        else if (i == 3)
+        {
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_3, Globals.EASY_SPOT_Y_POSITION_3, 140);
+        }
+        else if (i == 4)
+        {
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_4, Globals.EASY_SPOT_Y_POSITION_4, 211);
+        }
+        else
+        {
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_5, Globals.EASY_SPOT_Y_POSITION_5, 286);
+        }
+    }
+
     public void CheckAnswer()
     {
         pressed_check = true;
@@ -196,6 +266,7 @@ public class GameLogic : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        initLevel();
         pressed_spot_1 = false;
         pressed_spot_2 = false;
         pressed_spot_3 = false;
