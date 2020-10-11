@@ -1242,7 +1242,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3a9cad33b20a88541ba7febf7381e900,
+      objectReference: {fileID: 21300000, guid: a9ecf669d36ceb942a38e5fe60ebb727,
         type: 3}
     - target: {fileID: 485729749889931186, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
         type: 3}
@@ -1659,7 +1659,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 490ff5c3da1a9ac459dd87f46d367b51,
+      objectReference: {fileID: 21300000, guid: de982bf23b89f484892f76c66ca6a935,
         type: 3}
     - target: {fileID: 485729749889931186, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
         type: 3}
@@ -1827,18 +1827,25 @@ MonoBehaviour:
   spot_3: {fileID: 1755454105}
   spot_4: {fileID: 154523523}
   spot_5: {fileID: 207513662}
+  spot_6: {fileID: 0}
   check: {fileID: 581925703}
   spot_1_pressed: {fileID: 936781427}
   spot_2_pressed: {fileID: 778406745}
   spot_3_pressed: {fileID: 888299822}
   spot_4_pressed: {fileID: 401825234}
   spot_5_pressed: {fileID: 961367784}
+  spot_6_pressed: {fileID: 0}
   check_win: {fileID: 767366514}
   check_lose: {fileID: 1402438525}
+  isHard: 0
   firstLvl1: 0
   firstLvl2: 0
   firstLvl3: 1
   firstLvl4: 0
+  SecondLvl1: 0
+  SecondLvl2: 0
+  SecondLvl3: 0
+  SecondLvl4: 0
   winningPanel: {fileID: 408243971}
   losingPanel: {fileID: 140551818}
 --- !u!4 &845266611
@@ -2342,6 +2349,12 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 485729749889931185, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7103e4514af95c4e8d60e71f3402e88,
+        type: 3}
     - target: {fileID: 485729749889931186, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
         type: 3}
       propertyPath: m_Name
@@ -3125,7 +3138,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3a9cad33b20a88541ba7febf7381e900,
+      objectReference: {fileID: 21300000, guid: a00645ca50faef9489d0069990e59912,
         type: 3}
     - target: {fileID: 485729749889931186, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
         type: 3}
@@ -3882,7 +3895,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 490ff5c3da1a9ac459dd87f46d367b51,
+      objectReference: {fileID: 21300000, guid: b8a55de6c87632c4faed66a051fe9dfb,
         type: 3}
     - target: {fileID: 485729749889931186, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
         type: 3}
@@ -4052,7 +4065,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 490ff5c3da1a9ac459dd87f46d367b51,
+      objectReference: {fileID: 21300000, guid: 51675316dc1a8864987616a019c30349,
         type: 3}
     - target: {fileID: 485729749889931186, guid: 313944b5dd9fbb04c84ca0911eba0b8f,
         type: 3}

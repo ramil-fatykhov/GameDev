@@ -419,13 +419,13 @@ public class GameLogic : MonoBehaviour {
             CheckAnswerParam = (pressed_spot_5 || (pressed_spot_1 && pressed_spot_2 && pressed_spot_3));
         } else if (firstLvl3)
         {
-            CheckAnswerParam = (pressed_spot_3 || pressed_spot_4);
+            CheckAnswerParam = ((pressed_spot_1 && pressed_spot_5) || pressed_spot_2 && (pressed_spot_3 || pressed_spot_4));
         } else if (firstLvl4)
         {
             CheckAnswerParam = (((pressed_spot_1 || pressed_spot_3 || pressed_spot_4) && pressed_spot_2 && pressed_spot_5) || ((pressed_spot_1 && pressed_spot_3) || (pressed_spot_1 && pressed_spot_4) || (pressed_spot_3 && pressed_spot_4)));
         } else if (SecondLvl1)
         {
-            CheckAnswerParam = (((pressed_spot_1 || pressed_spot_3 || pressed_spot_4) && pressed_spot_2 && pressed_spot_5) || ((pressed_spot_1 && pressed_spot_3) || (pressed_spot_1 && pressed_spot_4) || (pressed_spot_3 && pressed_spot_4)));
+            CheckAnswerParam = ((pressed_spot_1 || pressed_spot_4) && (pressed_spot_2 || pressed_spot_3) && (pressed_spot_5 || pressed_spot_6));
         } else if (SecondLvl2)
         {
             CheckAnswerParam = ((pressed_spot_1 && (pressed_spot_5 || pressed_spot_4) && (pressed_spot_6 || pressed_spot_2)) || ((pressed_spot_6 || pressed_spot_2) && pressed_spot_3 && (pressed_spot_5 || pressed_spot_4)));
