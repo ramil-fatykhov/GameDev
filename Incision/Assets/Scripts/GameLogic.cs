@@ -152,6 +152,7 @@ public class GameLogic : MonoBehaviour {
         visible_3_spot();
         visible_4_spot();
         visible_5_spot();
+        visible_6_spot();
         spot_1.interactable = true;
         spot_2.interactable = true;
         spot_3.interactable = true;
@@ -419,7 +420,7 @@ public class GameLogic : MonoBehaviour {
             CheckAnswerParam = (pressed_spot_5 || (pressed_spot_1 && pressed_spot_2 && pressed_spot_3));
         } else if (firstLvl3)
         {
-            CheckAnswerParam = ((pressed_spot_1 && pressed_spot_5) || pressed_spot_2 && (pressed_spot_3 || pressed_spot_4));
+            CheckAnswerParam = ((pressed_spot_1 || pressed_spot_5) && (pressed_spot_2 || (pressed_spot_4 && pressed_spot_5)));
         } else if (firstLvl4)
         {
             CheckAnswerParam = (((pressed_spot_1 || pressed_spot_3 || pressed_spot_4) && pressed_spot_2 && pressed_spot_5) || ((pressed_spot_1 && pressed_spot_3) || (pressed_spot_1 && pressed_spot_4) || (pressed_spot_3 && pressed_spot_4)));
