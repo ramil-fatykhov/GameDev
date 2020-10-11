@@ -178,11 +178,23 @@ public class GameLogic : MonoBehaviour {
         spot_4.transform.position = getButtonCoordinates(button_index_4);
         spot_5.transform.position = getButtonCoordinates(button_index_5);
 
+        spot_1.transform.rotation = Quaternion.Euler(getButtonRotation(button_index_1));
+        spot_2.transform.rotation = Quaternion.Euler(getButtonRotation(button_index_2));
+        spot_3.transform.rotation = Quaternion.Euler(getButtonRotation(button_index_3));
+        spot_4.transform.rotation = Quaternion.Euler(getButtonRotation(button_index_4));
+        spot_5.transform.rotation = Quaternion.Euler(getButtonRotation(button_index_5));
+
         spot_1_pressed.transform.position = spot_1.transform.position;
         spot_2_pressed.transform.position = spot_2.transform.position;
         spot_3_pressed.transform.position = spot_3.transform.position;
         spot_4_pressed.transform.position = spot_4.transform.position;
         spot_5_pressed.transform.position = spot_5.transform.position;
+
+        spot_1_pressed.transform.rotation = spot_1.transform.rotation;
+        spot_2_pressed.transform.rotation = spot_2.transform.rotation;
+        spot_3_pressed.transform.rotation = spot_3.transform.rotation;
+        spot_4_pressed.transform.rotation = spot_4.transform.rotation;
+        spot_5_pressed.transform.rotation = spot_5.transform.rotation;
         //init spots buttons end
     }
 
@@ -194,19 +206,43 @@ public class GameLogic : MonoBehaviour {
         }
         else if (i == 2)
         {
-            return new Vector3(Globals.EASY_SPOT_X_POSITION_2, Globals.EASY_SPOT_Y_POSITION_2, 70);
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_2, Globals.EASY_SPOT_Y_POSITION_2, 0);
         }
         else if (i == 3)
         {
-            return new Vector3(Globals.EASY_SPOT_X_POSITION_3, Globals.EASY_SPOT_Y_POSITION_3, 140);
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_3, Globals.EASY_SPOT_Y_POSITION_3, 0);
         }
         else if (i == 4)
         {
-            return new Vector3(Globals.EASY_SPOT_X_POSITION_4, Globals.EASY_SPOT_Y_POSITION_4, 211);
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_4, Globals.EASY_SPOT_Y_POSITION_4, 0);
         }
         else
         {
-            return new Vector3(Globals.EASY_SPOT_X_POSITION_5, Globals.EASY_SPOT_Y_POSITION_5, 286);
+            return new Vector3(Globals.EASY_SPOT_X_POSITION_5, Globals.EASY_SPOT_Y_POSITION_5, 0);
+        }
+    }
+
+    public Vector3 getButtonRotation(int i)
+    {
+        if (i == 1)
+        {
+            return new Vector3(0, 0, 0);
+        }
+        else if (i == 2)
+        {
+            return new Vector3(0, 0, 70);
+        }
+        else if (i == 3)
+        {
+            return new Vector3(0, 0, 140);
+        }
+        else if (i == 4)
+        {
+            return new Vector3(0, 0, 211);
+        }
+        else
+        {
+            return new Vector3(0, 0, 286);
         }
     }
 

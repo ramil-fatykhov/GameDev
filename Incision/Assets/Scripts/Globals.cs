@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Globals : MonoBehaviour
 {
-    public static int CANVAS_X = 540;
-    public static int CANVAS_Y = 960;
+    public static int CANVAS_X = 575;
+    public static int CANVAS_Y = 266;
 
     //spots button
     public static int EASY_SPOT_X_POSITION_1 = -9 + CANVAS_X;
