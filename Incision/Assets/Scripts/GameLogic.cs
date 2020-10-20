@@ -152,19 +152,28 @@ public class GameLogic : MonoBehaviour {
         visible_3_spot();
         visible_4_spot();
         visible_5_spot();
-        visible_6_spot();
+        if (isHard)
+        {
+            visible_6_spot();
+        }
         spot_1.interactable = true;
         spot_2.interactable = true;
         spot_3.interactable = true;
         spot_4.interactable = true;
         spot_5.interactable = true;
-        spot_6.interactable = true;
+        if (isHard)
+        {
+            spot_6.interactable = true;
+        }
         spot_1_pressed.interactable = true;
         spot_2_pressed.interactable = true;
         spot_3_pressed.interactable = true;
         spot_4_pressed.interactable = true;
         spot_5_pressed.interactable = true;
-        spot_6_pressed.interactable = true;
+        if (isHard)
+        {
+            spot_6_pressed.interactable = true;
+        }
 
         if (!_isLose && (HealthController.count != 0 || TimerController.currentTime != 0f))
         {

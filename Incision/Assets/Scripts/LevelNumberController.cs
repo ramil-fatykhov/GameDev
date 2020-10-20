@@ -17,7 +17,7 @@ public class LevelNumberController : MonoBehaviour
 
         for(int i = 0; i < taskNumber; ++i)
         {
-           Utils.ChangeColorImage(taskPoints[i], new Color32(79, 189, 170, 255));
+           Utils.ChangeColorImage(taskPoints[i], new Color32(255, 0, 0, 255));
         }
     }
 }
